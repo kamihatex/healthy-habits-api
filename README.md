@@ -12,6 +12,7 @@ Following API Design in Node.js, v5 on Frontend Masters
 
 # Project Structure
 
+```bash
 habit-habits-api/
 ├── env.ts # Environment configuration
 ├── src/
@@ -21,9 +22,11 @@ habit-habits-api/
 ├── .env.test # Test environment variables
 ├── .env.example # Environment template
 └── package.json
+```
 
 # RESTful Route Patterns
 
+```bash
 // Resource: Users
 GET /api/users // Get all users
 GET /api/users/123 // Get specific user
@@ -36,3 +39,4 @@ DELETE /api/users/123 // Delete user
 GET /api/users/123/habits // Get user's habits
 POST /api/users/123/habits // Create habit for user
 DELETE /api/users/123/habits/456 // Delete specific habit
+```
