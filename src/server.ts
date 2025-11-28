@@ -9,11 +9,15 @@ import { env, isDev, isTestEnv } from '../env.ts'
 
 const app = express()
 
+const allowedOrigins = env.CORS_ORIGIN
+console.log(env.CORS_ORIGIN)
 app.use(helmet())
 app.use(
   cors({
-    origin: env.CORS_ORIGIN,
+    origin: allowedOrigins,
     credentials: true,
+    methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH', 'OPTIONS'],
+    allowedHeaders: ['Content-Type', 'Authorization'],
   })
 )
 
